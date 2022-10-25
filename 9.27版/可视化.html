@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("可视化.css");
+    </style>
+    <script src="可视化.js"></script>
+</head>
+<body>
+    <div style="background-color: rgba(255, 255, 255, 0.701);">
+        <div>
+            <div style="display: flex; flex-direction: row; flex-wrap: nowrap;">
+                <div class="picture">
+                    <canvas id="mycanvas" style="height: 600;width : 1011;">浏览器不支持canvas</canvas>
+                </div>
+                <div class="label">
+                    <div class="shell">
+                        <button type="button" class="button" id="属性控件" onclick="person()">人物属性</button>
+                        <button type="button" class="button" id="动作控件" onclick="action()">动作</button>
+                        <button type="button" class="button" id="情绪控件" onclick="emo()">情绪</button>
+                        <button type="button" class="button" id="场景控件" onclick="sence()">场景</button>
+                    </div>
+                    <div style="background-color: rgb(177, 244, 9);padding: 10px;border-radius: 5%;">
+                        <div style="flex-direction: row;display: flex;"><div style="width:45%;display: flex;"><text id="人物属性零"></text></div><div style="width:45%;display: flex;"><text id="人物属性一"></text></div></div>
+                        <div style="flex-direction: row;display: flex;"><div><text id="人物属性二"></text></div><div><text id="人物属性三"></text></div></div>
+                        <!-- <text id="人物属性一"></text>
+                        <text id="人物属性二"></text>
+                        <text id="人物属性三"></text> -->
+                    </div>
+                    <div style="background-color: rgb(224, 88, 78);border-radius: 2%;margin-top: 10px ;"><text id="动作"></text></div>
+                    <div style="background-color: rgb(84, 100, 237);border-radius: 2%;margin-top: 10px"><text id="情绪"></text></div>
+                    <div style="background-color: rgb(224, 244, 9);border-radius: 2%;margin-top: 10px"><text id="场景"></text></div>
+                </div>
+            </div>
+        </div>
+        <div class="control_">
+            <button type="button" class="buttonl" onclick="Display_picture_left()"><</button>
+            <button type="button" class="buttonm" onclick="Display_picture_order()">+</button>
+            <button type="button" class="buttonr" onclick="Display_picture_right()">></button>
+            <!-- <div style="height: 40px;background-color: #fff;margin-left: 50px;display: inline-flex;"> -->
+                <text id="剩余数量"></text>
+                <text id="tid"></text>
+            <!-- </div> -->
+            <input style="height: 40px; margin-left: 50px;" type="file" name="file" value="上传文件" onchange="showPreview(this)" />
+            <input type="text" id="input_content">
+            <button type="button" id="input" onclick="Jump()">跳转</button>
+        </div>
+    </div>
+    <img src="" id="temp_img" style="width: 0px;height:0px;">
+   
+</body>
+</html>
